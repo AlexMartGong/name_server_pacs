@@ -1,12 +1,21 @@
 package org.ax.jdbc.middleware;
 
 public class Person {
-    String name;
-    String address;
-    String phoneNumber;
+    private int id;
+    private String name;
+    private String address;
+    private String phoneNumber;
 
     public String getName() {
         return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setName(String name) {
