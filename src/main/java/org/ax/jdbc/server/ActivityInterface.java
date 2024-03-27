@@ -48,7 +48,6 @@ public class ActivityInterface extends UnicastRemoteObject implements IMethodsSh
 
     @Override
     public List<Person> consultPerson(String filter) throws RemoteException {
-        //List<Person> people = new ArrayList<>();
         String sql = "SELECT * FROM people WHERE name LIKE ?";
         try (PreparedStatement stmt = getConnection().prepareStatement(sql)) {
             stmt.setString(1, "%" + filter + "%");
@@ -59,7 +58,6 @@ public class ActivityInterface extends UnicastRemoteObject implements IMethodsSh
                     p.setName(rs.getString("name"));
                     p.setAddress(rs.getString("address"));
                     p.setPhoneNumber(rs.getString("phone_number"));
-                    //people.add(p);
                     personList.add(p);
                 }
             }

@@ -1,9 +1,10 @@
 package org.ax.jdbc.middleware;
 
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
 
-public interface IMethodsShred {
+public interface IMethodsShred extends Remote {
 
     boolean addPerson(Person p) throws RemoteException;
     boolean deletePerson(Person p) throws RemoteException;

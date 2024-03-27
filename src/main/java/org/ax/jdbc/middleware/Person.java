@@ -1,6 +1,8 @@
 package org.ax.jdbc.middleware;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
     private int id;
     private String name;
     private String address;
