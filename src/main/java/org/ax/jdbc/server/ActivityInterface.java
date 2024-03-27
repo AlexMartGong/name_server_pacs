@@ -35,6 +35,7 @@ public class ActivityInterface extends UnicastRemoteObject implements IMethodsSh
             stmt.setString(3, p.getPhoneNumber());
 
             stmt.executeUpdate();
+            System.out.println(true);
             return true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -48,6 +49,7 @@ public class ActivityInterface extends UnicastRemoteObject implements IMethodsSh
 
     @Override
     public List<Person> consultPerson(String filter) throws RemoteException {
+        personList.clear();
         String sql = "SELECT * FROM people WHERE name LIKE ?";
         try (PreparedStatement stmt = getConnection().prepareStatement(sql)) {
             stmt.setString(1, "%" + filter + "%");
@@ -64,6 +66,7 @@ public class ActivityInterface extends UnicastRemoteObject implements IMethodsSh
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        System.out.println("Filter");
         return personList;
     }
 
@@ -79,6 +82,7 @@ public class ActivityInterface extends UnicastRemoteObject implements IMethodsSh
             stmt.setInt(4, p.getId());
 
             stmt.executeUpdate();
+            System.out.println(true);
             return true;
 
         } catch (SQLException e) {
