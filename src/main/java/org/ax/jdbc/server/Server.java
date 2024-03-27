@@ -12,7 +12,6 @@ public class Server {
             Registry registry = LocateRegistry.createRegistry(5002);
             registry.rebind("objServer", objectActivity);
             System.out.println("Object public");
-            System.out.println(objectActivity);
         } catch (RemoteException e) {
             throw new RuntimeException(e);
         }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3523fd01-991a-41fd-8aa9-ffc62f22fa25" name="Changes" comment="">
+    <list default="true" id="3523fd01-991a-41fd-8aa9-ffc62f22fa25" name="Changes" comment="Agregamos letreros en los métodos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ax/jdbc/server/ActivityInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ax/jdbc/server/ActivityInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ax/jdbc/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ax/jdbc/server/Server.java" afterDir="false" />
@@ -114,14 +114,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711515138544</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Agregamos letreros en los métodos">
+      <option name="closed" value="true" />
+      <created>1711577272471</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711577272471</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start of the project" />
     <MESSAGE value="Implements methods addPerson, consult and modify" />
     <MESSAGE value="Sincronismos el cliente con el servidor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sincronismos el cliente con el servidor" />
+    <MESSAGE value="Agregamos letreros en los métodos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregamos letreros en los métodos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

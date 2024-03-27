@@ -35,7 +35,7 @@ public class ActivityInterface extends UnicastRemoteObject implements IMethodsSh
             stmt.setString(3, p.getPhoneNumber());
 
             stmt.executeUpdate();
-            System.out.println(true);
+            System.out.println("Add person: " + true);
             return true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -44,7 +44,17 @@ public class ActivityInterface extends UnicastRemoteObject implements IMethodsSh
 
     @Override
     public boolean deletePerson(Person p) throws RemoteException {
-        return false;
+
+        try (PreparedStatement stmt = getConnection().prepareStatement("DELETE FROM people WHERE id_person=?")) {
+
+            stmt.setInt(1, p.getId());
+            stmt.executeUpdate();
+            System.out.println("Delete person: " + true);
+            return true;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -82,7 +92,7 @@ public class ActivityInterface extends UnicastRemoteObject implements IMethodsSh
             stmt.setInt(4, p.getId());
 
             stmt.executeUpdate();
-            System.out.println(true);
+            System.out.println("Modify: " + true);
             return true;
 
         } catch (SQLException e) {
